@@ -1,0 +1,14 @@
+/* Leaflet needs its CSS */
+@import url("https://unpkg.com/leaflet@1.9.4/dist/leaflet.css");
+
+/* Optional: remove margin/padding so map fills the page */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+#map {
+  height: 100%;
+  width: 100%;
+}
