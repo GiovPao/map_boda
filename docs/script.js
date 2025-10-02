@@ -13,7 +13,21 @@ function initMap() {
     attribution:
       '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors'
   }).addTo(map);
-
+  
+const ringIcon = L.divIcon({
+  className: "custom-div-icon",
+  html: `<div class="marker-pin blue"></div>
+         <img src="assets/icons/wedding-ring.png" class="marker-icon" />`,
+  iconSize: [40, 40],
+  iconAnchor: [20, 40]
+});
+const champagneIcon = L.divIcon({
+  className: "custom-div-icon",
+  html: `<div class="marker-pin blue"></div>
+         <img src="assets/icons/champagne-glass.png" class="marker-icon" />`,
+  iconSize: [40, 40],
+  iconAnchor: [20, 40]
+});
   // Example locations
   const locations = [
     {
@@ -23,16 +37,18 @@ function initMap() {
       address: "P.º del Muelle, 2, 20003 Donostia-San Sebastian, Gipuzkoa",
       contact: "+1 555-1234",
       website:
-        "https://www.google.com/maps/dir//Capilla+de+San+Pedro+Ap%C3%B3stol,+P.%C2%BA+del+Muelle,+2,+20003+Donostia,+Gipuzkoa/@43.3235899,-1.988796,18.77z/data=!4m9!4m8!1m0!1m5!1m1!1s0xd51a54d32987a8d:0x157ebdd186ea07ed!2m2!1d-1.9880744!2d43.3236819!3e0?entry=ttu&g_ep=EgoyMDI1MDkyOS4wIKXMDSoASAFQAw%3D%3D"
+        "https://www.google.com/maps/dir//Capilla+de+San+Pedro+Ap%C3%B3stol,+P.%C2%BA+del+Muelle,+2,+20003+Donostia,+Gipuzkoa/@43.3235899,-1.988796,18.77z/data=!4m9!4m8!1m0!1m5!1m1!1s0xd51a54d32987a8d:0x157ebdd186ea07ed!2m2!1d-1.9880744!2d43.3236819!3e0?entry=ttu&g_ep=EgoyMDI1MDkyOS4wIKXMDSoASAFQAw%3D%3D",
+      icon: ringIcon
     },
     {
       name: "Hotel Londres",
-      lat: 43.3181508,
-      lng: -1.9849778,
+      lat: 43.31822, 
+      lng: -1.98513,
       address: "Zubieta Kalea, 2, 20007 Donostia, Gipuzkoa",
       contact: "+49 30 123456",
       website:
-        "https://www.google.com/maps/dir//Hotel+de+Londres,+Zubieta+Kalea,+2,+20007+Donostia,+Gipuzkoa/@43.3181046,-1.995257,15z/data=!3m1!5s0xd51a553999a5e03:0x9de6c08a24b8433!4m9!4m8!1m0!1m5!1m1!1s0xd51a55391c1c7d9:0x44362d1de262a158!2m2!1d-1.9849787!2d43.3181051!3e0?entry=ttu&g_ep=EgoyMDI1MDkyOS4wIKXMDSoASAFQAw%3D%3D"
+        "https://www.google.com/maps/dir//Hotel+de+Londres,+Zubieta+Kalea,+2,+20007+Donostia,+Gipuzkoa/@43.3181046,-1.995257,15z/data=!3m1!5s0xd51a553999a5e03:0x9de6c08a24b8433!4m9!4m8!1m0!1m5!1m1!1s0xd51a55391c1c7d9:0x44362d1de262a158!2m2!1d-1.9849787!2d43.3181051!3e0?entry=ttu&g_ep=EgoyMDI1MDkyOS4wIKXMDSoASAFQAw%3D%3D",
+      icon: champagneIcon
     }
   ];
 
@@ -42,7 +58,7 @@ function initMap() {
       `<strong>${loc.name}</strong><br>` +
       (loc.address ? loc.address + "<br>" : "") +
       `<a href="${loc.website}" target="_blank" style="text-decoration:none; font-size:18px;">➡️ Google Maps</a>`;
-    L.marker([loc.lat, loc.lng]).addTo(map).bindPopup(popupContent);
+    L.marker([loc.lat, loc.lng], { icon: loc.icon }).addTo(map).bindPopup(popupContent);
   });
 
   // GeoJSON line content

@@ -12,3 +12,34 @@ html {
   height: 100%;
   width: 100%;
 }
+
+.custom-div-icon .marker-pin {
+  width: 45px;
+  height: 45px;
+  border-radius: 50% 50% 50% 0;
+  background: #2A81CB; /* default blue */
+  position: absolute;
+  transform: rotate(-45deg);
+  left: 5px;
+  top: 5px;
+}
+
+.custom-div-icon .marker-pin::after {
+  content: '';
+  width: 39px;
+  height: 39px;
+  margin: 3px 0 0 3px;
+  background: white;  /* circle background */
+  position: absolute;
+  border-radius: 50%;
+}
+
+.custom-div-icon .marker-icon {
+  width: 31px; 
+  height: 31px;
+  position: absolute;
+  top: 11px;
+  left: 11px;
+  transform: rotate(45deg); /* rotate back */
+}
+
