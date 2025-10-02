@@ -6,7 +6,7 @@ document.head.appendChild(leafletScript);
 
 function initMap() {
   // Create the map
-  const map = L.map("map").setView([43.321, -1.99], 15);
+  const map = L.map("map").setView([43.321, -1.99], 14);
 
   // Add OpenStreetMap tiles
   L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
