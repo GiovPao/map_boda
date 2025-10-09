@@ -25,7 +25,7 @@ const ringIcon = L.divIcon({
 const champagneIcon = L.divIcon({
   className: "custom-div-icon",
   html: `<div class="marker-pin blue"></div>
-         <img src="assets/icons/champagne-glass.png" class="marker-icon" />`,
+           <span class="marker-icon" style="font-size: 24px; text-align: center; line-height: 31px;">🥂</span>`,
   iconSize: [40, 40],
   iconAnchor: [20, 40]
 });
