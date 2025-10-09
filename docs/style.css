@@ -21,6 +21,7 @@ html {
   position: absolute;
   left: 5px;
   top: 5px;
+  transform: rotate(-45deg);
 }
 
 .custom-div-icon .marker-pin::after {
@@ -39,6 +40,6 @@ html {
   position: absolute;
   top: 11px;
   left: 11px;
-  transform: rotate(-45deg);
+  transform: rotate(45deg);
 }
 
