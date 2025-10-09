@@ -13,14 +13,15 @@ function initMap() {
     attribution:
       '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors'
   }).addTo(map);
-  
+
 const ringIcon = L.divIcon({
-  className: "custom-div-icon",
   html: `<div class="marker-pin blue"></div>
-         <img src="assets/icons/wedding-ring.png" class="marker-icon" />`,
-  iconSize: [40, 40],
-  iconAnchor: [20, 40]
+         <img src="assets/icons/wedding-ring.png" class="marker-icon" />`,               // The emoji
+  className: "custom-div-icon",  // The CSS class from the <style> block
+  iconSize: [36, 36],       // Size of the icon
+  iconAnchor: [18, 36]      // Point of the icon which will correspond to marker's location
 });
+
 const champagneIcon = L.divIcon({
   className: "custom-div-icon",
   html: `<div class="marker-pin blue"></div>
