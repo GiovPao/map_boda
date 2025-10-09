@@ -19,7 +19,6 @@ html {
   border-radius: 50% 50% 50% 0;
   background: #2A81CB; /* default blue */
   position: absolute;
-  transform: rotate(-45deg);
   left: 5px;
   top: 5px;
 }
@@ -40,6 +39,5 @@ html {
   position: absolute;
   top: 11px;
   left: 11px;
-  transform: rotate(45deg); /* rotate back */
 }
 
