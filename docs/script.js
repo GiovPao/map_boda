@@ -16,7 +16,7 @@ function initMap() {
 
 const ringIcon = L.divIcon({
   html: `<div class="marker-pin blue"></div>
-         '💒'`,               // The emoji
+           <span class="marker-icon" style="font-size: 24px; text-align: center; line-height: 31px;">💒</span>`,
   className: "custom-div-icon",  // The CSS class from the <style> block
   iconSize: [36, 36],       // Size of the icon
   iconAnchor: [18, 36]      // Point of the icon which will correspond to marker's location
